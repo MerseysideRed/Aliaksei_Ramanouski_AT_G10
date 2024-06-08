@@ -34,7 +34,5 @@ public class Course {
 
         System.out.println("Average value is: " + avg);
     }
-
-
 }
 

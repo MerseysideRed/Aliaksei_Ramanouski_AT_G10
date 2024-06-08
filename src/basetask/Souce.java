@@ -26,7 +26,7 @@ public class Souce {
         this.color = color;
     }
 
-    public void  printSouceDetails() {
+    public void printSouceDetails() {
         System.out.println("Это соус " + getName() + " " + getColor() + " цвета");
     }
 }

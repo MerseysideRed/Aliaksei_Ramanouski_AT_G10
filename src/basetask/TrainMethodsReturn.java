@@ -11,7 +11,7 @@ public class TrainMethodsReturn {
     }
 
     public String returnNewChar(char charExample) {
-        return charExample + " " +  charExample;
+        return charExample + " " + charExample;
     }
 
     public float returnNewFloat(float floatNumberExample) {
@@ -23,11 +23,11 @@ public class TrainMethodsReturn {
     }
 
     public short returnNewShort(short shortNumberExample) {
-        return (short)(shortNumberExample - 1);
+        return (short) (shortNumberExample - 1);
     }
 
     public byte returnNewByte(byte byteNumberExample) {
-        return (byte)(byteNumberExample * 2);
+        return (byte) (byteNumberExample * 2);
     }
 
     public boolean returnNewBoolean(boolean booleanExample) {

@@ -8,8 +8,8 @@ public class TrainMethodsPrimitiveRunner {
         trainMethodsPrimitive.printChar('A');
         trainMethodsPrimitive.printFloat(123.45f);
         trainMethodsPrimitive.printDouble(123456.789);
-        trainMethodsPrimitive.printShort((short)-32767);
-        trainMethodsPrimitive.printByte((byte)42);
+        trainMethodsPrimitive.printShort((short) -32767);
+        trainMethodsPrimitive.printByte((byte) 42);
         trainMethodsPrimitive.printBoolean(true);
     }
 }

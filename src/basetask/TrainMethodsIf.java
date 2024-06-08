@@ -10,12 +10,12 @@ public class TrainMethodsIf {
         }
     }
 
-    public long  returnNewLong(long longNumberExample) {
-         if (longNumberExample > 300) {
-             return longNumberExample - 300;
-         } else {
-             return longNumberExample + 20;
-         }
+    public long returnNewLong(long longNumberExample) {
+        if (longNumberExample > 300) {
+            return longNumberExample - 300;
+        } else {
+            return longNumberExample + 20;
+        }
     }
 
     public String returnNewChar(char charExample) {
