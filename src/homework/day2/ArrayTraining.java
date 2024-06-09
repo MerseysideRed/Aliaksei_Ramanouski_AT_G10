@@ -26,7 +26,6 @@ public class ArrayTraining {
 
     public int[] returnReverseArrayLargerN(int[] array, int n) {
         int counter = 0;
-
         for (int i = 0; i < array.length; i++) {
             if (array[i] > n) {
                 counter++;
@@ -35,7 +34,6 @@ public class ArrayTraining {
 
         int[] secondArray = new int[counter];
         int newCounter = 0;
-
         for (int i = 0; i < array.length; i++) {
             if (array[i] > n) {
                 secondArray[newCounter] = array[i];
@@ -45,7 +43,6 @@ public class ArrayTraining {
 
         int[] thirdArray = new int[secondArray.length];
         int anotherCounter = 0;
-
         for (int i = secondArray.length - 1; i >= 0; i--) {
             thirdArray[anotherCounter] = secondArray[i];
             anotherCounter++;
