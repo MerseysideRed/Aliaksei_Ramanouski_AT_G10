@@ -9,6 +9,7 @@ public class ArrayTraining {
         System.out.println(arrayTraining.sumNElementsArray(newArray, 3));
         System.out.println(Arrays.toString(arrayTraining.returnReverseArrayLargerN(newArray, 3)));
         System.out.println(arrayTraining.returnSumSpecificElements(newArray));
+        arrayTraining.drawCow();
     }
 
     public int sumNElementsArray(int[] array, int n) {
@@ -76,5 +77,17 @@ public class ArrayTraining {
         }
 
         return sum;
+    }
+
+    public void drawCow() {
+        System.out.println(
+                """
+                         ^__^
+                         (oo)\\\\_______
+                        (__)\\ ) \\/\\  \\
+                             ||----w |\\
+                             ||     ||
+                """
+        );
     }
 }
