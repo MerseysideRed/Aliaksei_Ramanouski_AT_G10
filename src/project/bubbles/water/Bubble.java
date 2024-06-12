@@ -1,4 +1,4 @@
-package bubbles;
+package project.bubbles.water;
 
 public class Bubble {
     private static final double VOLUME = 0.3;
