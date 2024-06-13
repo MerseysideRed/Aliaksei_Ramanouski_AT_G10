@@ -38,8 +38,8 @@ public class FlyableProcessorRunner {
         flyableProcessor.runFlyable(aircraftCopter);
         flyableProcessor.runFlyable(aircraftPlane);
         flyableProcessor.runFlyable(aircraftRocket);
-        //flyableProcessor.runFlyable(insectFly); // There is a compilation error because Insect class doesn't implement Flyable interface. We can transfer to method from interface only instances from related classes for this interface
-        //flyableProcessor.runFlyable(insectMosquito); //There is a compilation error because Insect class doesn't implement Flyable interface. We can transfer to method from interface only instances from related classes for this interface
+        //flyableProcessor.runFlyable(insectFly); // There is a compilation error because Insect class doesn't implement Flyable interface. We can't transfer to method from interface only instances from related classes for this interface
+        //flyableProcessor.runFlyable(insectMosquito); //There is a compilation error because Insect class doesn't implement Flyable interface. We can't transfer to method from interface only instances from related classes for this interface
         flyableProcessor.runFlyable(aCopter);
         flyableProcessor.runFlyable(aPlane);
         flyableProcessor.runFlyable(aRocket);
