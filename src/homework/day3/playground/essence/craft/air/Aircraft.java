@@ -3,7 +3,10 @@ package homework.day3.playground.essence.craft.air;
 import homework.day3.playground.essence.Matter;
 
 public abstract class Aircraft extends Matter {
-    public Aircraft(int mass) {
+    protected String name;
+
+    public Aircraft(int mass, String name) {
         super(mass);
+        this.name = name;
     }
 }
