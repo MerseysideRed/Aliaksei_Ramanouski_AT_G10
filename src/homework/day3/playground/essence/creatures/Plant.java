@@ -10,6 +10,10 @@ public abstract class Plant extends Matter {
         this.name = name;
     }
 
+    public Plant(int mass) {
+        super(mass);
+    }
+
     public String getName() {
         return name;
     }
