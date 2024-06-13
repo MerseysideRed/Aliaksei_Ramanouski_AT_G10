@@ -1,4 +1,6 @@
 package homework.day3.playground.essence.material;
 
-public class Diesel {
+import homework.day3.playground.essence.Matter;
+
+public class Diesel extends Matter {
 }
