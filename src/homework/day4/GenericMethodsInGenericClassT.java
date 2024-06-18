@@ -5,8 +5,8 @@ public class GenericMethodsInGenericClassT<T> {
         System.out.println("I am an object of " + argument.getClass().getSimpleName() + " class");
     }
 
-    public void genericMethodTwoGenArgs(T argument1, T argument2) {
-        System.out.println("We are objects of " + argument1.getClass().getSimpleName() + " class and " + argument2.getClass().getSimpleName() + " class");
+    public String genericMethodTwoGenArgs(T argument1, T argument2) {
+        return "We are objects of " + argument1.getClass().getSimpleName() + " class and " + argument2.getClass().getSimpleName() + " class";
     }
 
     public void genericMethodHalfGenArgs(T argument, String s) {
