@@ -9,7 +9,7 @@ import java.io.ObjectOutputStream;
 
 public class WriteObjectToFileClass {
     public static void main(String[] args) {
-        Crocodile croc = new Crocodile(12,"Croc");
+        Crocodile croc = new Crocodile(45,"Crockie");
         WriteObjectToFileClass writeObjectToFileClass = new WriteObjectToFileClass();
         writeObjectToFileClass.writeObjectToFile(croc, "hometaskWrittenObject.txt");
     }
