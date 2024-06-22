@@ -18,13 +18,6 @@ public class ReadAndRewriteObjectToNewFileClass {
              BufferedWriter writer = new BufferedWriter(new FileWriter(filename2))) {
 
             Object obj = ois.readObject();
-
-            if (obj instanceof Crocodile) {
-                Crocodile croc = (Crocodile) obj;
-            } else {
-                System.out.println("The file does not contain a Crocodile object.");
-            }
-
             writer.write(obj.toString());
 
         } catch (IOException | ClassNotFoundException e) {
