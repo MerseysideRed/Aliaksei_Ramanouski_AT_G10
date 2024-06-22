@@ -25,6 +25,8 @@ public class ReadAndRewriteObjectToNewFileClass {
                 System.out.println("The file does not contain a Crocodile object.");
             }
 
+            writer.write(obj.toString());
+
         } catch (IOException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
