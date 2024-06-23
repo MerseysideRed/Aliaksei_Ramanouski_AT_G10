@@ -4,14 +4,12 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
 public class ListCarsClass {
     public static void main(String[] args) {
-        List<String> cars = new ArrayList<>();
-        Collections.addAll(cars, "Мерс", "Ауди", "Жигуль", "Рено", "Жигуль", "Жигуль", "Ауди");
+        List<String> cars = new ArrayList<>(List.of("Мерс", "Ауди", "Жигуль", "Рено", "Жигуль", "Жигуль", "Ауди"));
 
         for (String car : cars) {
             try (BufferedWriter writer = new BufferedWriter(new FileWriter("cars.txt", true))) {
