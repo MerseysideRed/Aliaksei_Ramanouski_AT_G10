@@ -19,7 +19,7 @@ public class ListButterfliesClass {
 
         int counter = 0;
         for (String butterfly : butterflies) {
-            if(butterfly.contains("o")){
+            if (butterfly.contains("o")) {
                 counter++;
             }
         }
@@ -31,7 +31,7 @@ public class ListButterfliesClass {
         System.out.println();
 
         for (String butterfly : butterflies) {
-            System.out.println(butterfly );
+            System.out.println(butterfly);
         }
     }
 }
