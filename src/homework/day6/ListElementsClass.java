@@ -32,7 +32,7 @@ public class ListElementsClass {
         }
         System.out.println();
 
-        elements.add(4,"Spinner");
+        elements.add(4, "Spinner");
 
         elements.remove(2);
 
