@@ -10,7 +10,7 @@ public class ListWaterClass {
         List<Water> waters = Arrays.asList(new Water("Прозрачная", "Нет"), new Water("Прозрачная", "Нет"), new Water("Мутная", "Аммиачный"));
 
         for (Water water : waters) {
-            System.out.println(water.getColor() + " - " + water.getSmell());
+            System.out.println(water.getColor() + " - " + water);
         }
     }
 }
