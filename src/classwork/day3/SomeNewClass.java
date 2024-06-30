@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class SomeNewClass {
+    
     public static void main(String[] args) {
         List<String> numbers = Arrays.asList("мама", "мыла", "раму", "чисто", "мама");
         numbers.stream().filter(x -> x.equals("мама")).count();
