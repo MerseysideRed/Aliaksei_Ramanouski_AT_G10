@@ -9,12 +9,14 @@ public class StreamBirdsRunner {
     public static void main(String[] args) {
         List<String> birds = Arrays.asList("Чайка", "Дрозд", "Бусел", "Голубь", "Воробей", "Цапля");
 
-        birds = birds.stream().map(bird -> bird.replace('о', 'a')).toList();
+        birds = Arrays.stream(birds.stream()
+                        .map(bird -> bird.replace('о', 'а'))
+                        .map(bird -> bird.toLowerCase())
+                        .map(bird -> bird.replace("ь", ""))
+                        .collect(Collectors.joining())
+                        .split("б"))
+                .toList();
 
-        String newBirds = birds.stream().map(bird -> bird.toLowerCase()).collect(Collectors.joining());
-
-        birds = Arrays.stream(newBirds.split("б")).toList();
-
-        birds.stream().forEach(bird -> System.out.println(bird));
+        birds.forEach(bird -> System.out.println(bird));
     }
 }

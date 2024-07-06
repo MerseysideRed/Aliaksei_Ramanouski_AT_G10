@@ -10,7 +10,11 @@ public class StreamNumbersList {
 
         numbers.forEach(number -> System.out.println(number));
 
+        System.out.println();
+
         numbers.stream().sorted().forEach(number -> System.out.println(number));
+
+        System.out.println();
 
         int sum = numbers.stream().reduce(0, (number1, number2) -> number1 + number2);
         System.out.println(sum);

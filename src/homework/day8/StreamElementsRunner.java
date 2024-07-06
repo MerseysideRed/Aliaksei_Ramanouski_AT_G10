@@ -1,27 +1,27 @@
 package homework.day8;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Stream;
 
 public class StreamElementsRunner {
 
     public static void main(String[] args) {
-        List<String> elements = Stream.of("Text field", "Radio", "Check-box", "Drop-down", "Picker", "Breadcrumb").toList();
+        AtomicInteger atomicInteger = new AtomicInteger(1);
 
-        List<String> finalElements = elements;
-        elements = elements.stream().flatMap(element -> {
-            String[] words = finalElements.toArray(new String[0]);
-            for (int i = 0; i < words.length; i++) {
-                if (i % 2 == 0) {
-                    words[i] = String.valueOf(words[i].length());
-                } else {
-                    words[i] = words[i].replace('e', 'o');
-                }
-            }
-            return Stream.of(String.join(" ", words));
-        }).toList();
-
-        elements = elements.stream().distinct().toList();
+        List<String> elements = Stream.of("Text field", "Radio", "Check-box", "Drop-down", "Picker", "Breadcrumb")
+                .flatMap(element -> Arrays.stream(element.split("[ -]")))
+                .map(element -> {
+                    int currentIndex = atomicInteger.getAndIncrement();
+                    if (currentIndex % 2 == 0) {
+                        return String.valueOf(element.length());
+                    } else {
+                        return element.replace('e', 'o');
+                    }
+                })
+                .distinct()
+                .toList();
 
         elements.forEach(element -> System.out.println(element));
     }
