@@ -11,7 +11,9 @@ public class StreamCitiesRunner {
 
         cities.addAll(Stream.of("Минск", "Москва", "Берлин").toList());
 
-        int lengthCounter = cities.stream().mapToInt(city -> city.length()).sum();
+        int lengthCounter = cities.stream()
+                .mapToInt(city -> city.length())
+                .sum();
 
         System.out.println(lengthCounter);
     }
