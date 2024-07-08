@@ -32,7 +32,7 @@ public class StreamSandRunner {
                         }
                     });
         } catch (IllegalStateException e) {
-            System.out.println("We have IllegalStateException because we tried to create a Map with duplicate keys. Keys need to be unique.");
+            System.out.println("We have IllegalStateException because we tried to create a Map with duplicate keys. Keys must be unique.");
         }
     }
 }
