@@ -13,10 +13,10 @@ public class StreamDoublesRunner {
 
         double totalVolume = Stream.of(33.42, 34.3, 0.79, 2.3426, 6.8, 13.24, 5.5, 769.9)
                 .mapToInt(elementDouble -> (int) Math.round(elementDouble))
-                .flatMap(elementInt -> IntStream.generate(() -> random.nextInt(elementInt + 1)).limit(elementInt))
+                .map(elementInt -> random.nextInt(elementInt + 1))
                 .distinct()
                 .boxed()
-                .flatMap(elementInteger -> IntStream.range(0, elementInteger).mapToObj(i -> new Bubble(elementInteger, "Bubble vol-" + i)))
+                .map(elementInteger -> new Bubble(elementInteger, "Bubble vol-" + elementInteger))
                 .peek(bubble -> System.out.println(bubble))
                 .mapToDouble(bubble -> bubble.getVolume())
                 .sum();

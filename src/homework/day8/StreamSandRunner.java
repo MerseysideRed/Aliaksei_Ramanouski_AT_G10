@@ -7,6 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -21,7 +22,7 @@ public class StreamSandRunner {
         try {
             sands.stream()
                     .filter(sand -> sand.getWeight() > 9 && sand.getName().contains("ч"))
-                    .sorted((sand1, sand2) -> Integer.compare(sand1.getWeight(), sand2.getWeight()))
+                    .sorted(Comparator.comparing(sand -> sand.getWeight()))
                     .flatMap(sand -> Stream.of(new Sand(sand.getWeight() * 2, sand.getName().toUpperCase())))
                     .collect(Collectors.toMap(sand -> sand.getWeight(), sand -> sand.getName()))
                     .forEach((weight, name) -> {
