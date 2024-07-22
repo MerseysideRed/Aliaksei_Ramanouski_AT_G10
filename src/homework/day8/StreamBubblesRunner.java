@@ -3,6 +3,7 @@ package homework.day8;
 import homework.day6.SeparatedPOJOClasses.Bubble;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -13,7 +14,7 @@ public class StreamBubblesRunner {
 
         int totalVolumeOfNewBubbles = bubbles.stream()
                 .filter(bubble -> bubble.getVolume() > 3)
-                .sorted((bubble1, bubble2) -> bubble1.getName().compareTo(bubble2.getName()))
+                .sorted(Comparator.comparing(bubble -> bubble.getName()))
                 .flatMap(bubble -> Stream.of(new Bubble(bubble.getVolume() * 3, bubble.getName())))
                 .mapToInt(bubble -> bubble.getVolume())
                 .sum();
